@@ -57,74 +57,74 @@ const RegisterForm = ({ onNavigateToLogin }) => {
 
     // Redirigir al formulario de inicio de sesión después de la alerta
     onNavigateToLogin();
-  };
+};
 
-  return (
+return (
     <div style={{ width: '100%' }}>
-      <Form aria-label="Register Form" onSubmit={handleSubmit}>
+    <Form aria-label="Register Form" onSubmit={handleSubmit}>
         <Stack gap={7}>
           {/* Título centrado */}
-          <h2 style={{ textAlign: 'center' }}>Registro</h2>
+        <h2 style={{ textAlign: 'center' }}>Registro</h2>
 
           {/* Campo para Nombre de Usuario */}
-          <FormGroup legendText="Nombre de Usuario">
+        <FormGroup legendText="Nombre de Usuario">
             <TextInput
-              id="username"
-              labelText="Nombre de Usuario"
-              placeholder="Ingresa tu nombre de usuario"
-              type="text"
-              value={username}
-              onChange={handleUsernameChange}
-              required
+            id="username"
+            labelText="Nombre de Usuario"
+            placeholder="Ingresa tu nombre de usuario"
+            type="text"
+            value={username}
+            onChange={handleUsernameChange}
+            required
             />
-          </FormGroup>
+        </FormGroup>
 
           {/* Campo para Correo Electrónico */}
-          <FormGroup legendText="Correo Electrónico">
+        <FormGroup legendText="Correo Electrónico">
             <TextInput
-              id="email"
-              labelText="Correo Electrónico"
-              placeholder="Ingresa tu correo electrónico"
-              type="email"
-              value={email}
-              onChange={handleEmailChange}
-              required
+            id="email"
+            labelText="Correo Electrónico"
+            placeholder="Ingresa tu correo electrónico"
+            type="email"
+            value={email}
+            onChange={handleEmailChange}
+            required
             />
-          </FormGroup>
+        </FormGroup>
 
           {/* Campo para Contraseña */}
-          <FormGroup legendText="Contraseña">
+        <FormGroup legendText="Contraseña">
             <TextInput
-              id="password"
-              labelText="Contraseña"
-              placeholder="Ingresa tu contraseña"
-              type="password"
-              value={password}
-              onChange={handlePasswordChange}
-              required
+            id="password"
+            labelText="Contraseña"
+            placeholder="Ingresa tu contraseña"
+            type="password"
+            value={password}
+            onChange={handlePasswordChange}
+            required
             />
-          </FormGroup>
+        </FormGroup>
 
           {/* Mostrar mensajes de error o éxito */}
-          {error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
-          {success && <p style={{ color: 'green', textAlign: 'center' }}>{success}</p>}
+        {error && <p style={{ color: 'red', textAlign: 'center' }}>{error}</p>}
+        {success && <p style={{ color: 'green', textAlign: 'center' }}>{success}</p>}
 
           {/* Botón de Submit */}
-          <Button type="submit" kind="primary" style={{ width: '100%' }}>
+        <Button type="submit" kind="primary" style={{ width: '100%' }}>
             Registrarse
-          </Button>
+        </Button>
 
           {/* Enlace para volver al Login */}
-          <p style={{ textAlign: 'center', marginTop: '10px' }}>
+        <p style={{ textAlign: 'center', marginTop: '10px' }}>
             ¿Ya tienes una cuenta?{' '}
             <button onClick={onNavigateToLogin} style={{ textDecoration: 'underline', cursor: 'pointer' }}>
-              Inicia sesión aquí
+            Inicia sesión aquí
             </button>
-          </p>
+        </p>
         </Stack>
-      </Form>
+    </Form>
     </div>
-  );
+);
 };
 
 export default RegisterForm;
